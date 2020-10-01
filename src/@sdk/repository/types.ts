@@ -20,6 +20,7 @@ export interface ICheckoutModelLineVariant {
   quantityAvailable?: number;
   id: string;
   name?: string;
+  labor?: number;
   sku?: string;
   pricing?: Checkout_lines_variant_pricing | null;
   product?: Checkout_lines_variant_product;

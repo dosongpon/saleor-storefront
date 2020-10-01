@@ -5,6 +5,7 @@ import * as React from "react";
 
 import { ProductVariantPicker } from "@components/organisms";
 import {
+  ProductDetails_product_labor,
   ProductDetails_product_pricing,
   ProductDetails_product_variants,
   ProductDetails_product_variants_pricing,
@@ -21,6 +22,7 @@ interface ProductDescriptionProps {
   productId: string;
   productVariants: ProductDetails_product_variants[];
   name: string;
+  labor: ProductDetails_product_labor;
   pricing: ProductDetails_product_pricing;
   items: ICheckoutModelLine[];
   addToCart(varinatId: string, quantity?: number): void;
@@ -140,7 +142,7 @@ class ProductDescription extends React.Component<
   );
 
   render() {
-    const { name } = this.props;
+    const { name, labor } = this.props;
     const { variant, variantStock, quantity } = this.state;
 
     const availableQuantity = this.getAvailableQuantity();
@@ -155,6 +157,7 @@ class ProductDescription extends React.Component<
     return (
       <div className="product-description">
         <h3>{name}</h3>
+    <p>ค่าแรง {labor.amount}</p>
         {isOutOfStock ? (
           this.renderErrorMessage("Out of stock")
         ) : (

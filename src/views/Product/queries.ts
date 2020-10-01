@@ -23,6 +23,10 @@ export const basicProductFragment = gql`
   fragment BasicProductFields on Product {
     id
     name
+    labor {
+      currency
+      amount
+    }
     thumbnail {
       url
       alt

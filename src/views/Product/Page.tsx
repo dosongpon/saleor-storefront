@@ -93,6 +93,7 @@ class Page extends React.PureComponent<
         items={this.props.items}
         productId={product.id}
         name={product.name}
+        labor={product.labor}
         productVariants={product.variants}
         pricing={product.pricing}
         addToCart={this.props.add}

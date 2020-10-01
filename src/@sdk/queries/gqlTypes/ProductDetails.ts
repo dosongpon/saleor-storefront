@@ -172,6 +172,18 @@ export interface ProductDetails_product_pricing_priceRange_stop_net {
   currency: string;
 }
 
+export interface ProductDetails_product_labor {
+  __typename: "Money";
+  /**
+   * Amount of money.
+   */
+  amount: number;
+  /**
+   * Currency code.
+   */
+  currency: string;
+}
+
 export interface ProductDetails_product_pricing_priceRange_stop {
   __typename: "TaxedMoney";
   /**

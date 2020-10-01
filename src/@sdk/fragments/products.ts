@@ -5,6 +5,9 @@ export const basicProductFragment = gql`
   fragment BasicProductFields on Product {
     id
     name
+    labor {
+      ...Price
+    }
     thumbnail {
       url
       alt
@@ -34,6 +37,9 @@ export const productVariantFragment = gql`
     id
     sku
     name
+    labor {
+      ...Price
+    }
     quantityAvailable(countryCode: $countryCode)
     isAvailable
     pricing {
