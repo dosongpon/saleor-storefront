@@ -25,4 +25,14 @@ export const paymentGateways: IPaymentGateway[] = [
     id: "mirumee.payments.stripe",
     name: "Stripe",
   },
+  {
+    config: [
+      {
+        field: "store_customer_card",
+        value: "false",
+      },
+    ],
+    id: "do.payments.scbqr",
+    name: "QR Code",
+  },
 ];

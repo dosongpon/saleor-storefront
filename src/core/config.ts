@@ -10,8 +10,8 @@ export const PROVIDERS = {
   DUMMY: {
     label: "Dummy",
   },
-  SCB_QR:{
-    label: "SCB-QR"
+  SCBQR:{
+    label: "QR Code",
   },
   STRIPE: {
     href: "https://js.stripe.com/v3/",
